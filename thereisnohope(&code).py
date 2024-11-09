@@ -1,6 +1,8 @@
 import telebot
 import os
 import pandas as pd
+import requests
+import bs4
 
 working_dirrectory = os.path.realpath(__file__).removesuffix('bot.py')
 dirrectory_files= os.listdir(working_dirrectory)
@@ -39,6 +41,20 @@ def user_exists(user_id):
         return df.loc[df['id']== user_id, 'name']
     else:
         return None
+
+def getRandomJoke():
+    page = requests.get('https://www.anekdot.ru/random/anekdot/')
+    if page.status_code == 200:
+        print('connection is succesfull')
+    else:
+        print('connection have failed')
+        return 'connection have failed'
+    soup = bs4.BeautifulSoup(page.text,'html.parser')
+    Joke = str(soup.find('div', class_='text'))
+    Joke = Joke.replace('<div class="text">','')
+    Joke = Joke.replace('<br/>','\n')
+    Joke = Joke.replace('</div>','')
+    return Joke
 
 
 bot = telebot.TeleBot('7541457982:AAGvdzslraoSgSKhtscXlLQDl_4wR-O1tgw', parse_mode=None)
