@@ -1,0 +1,6 @@
+{
+	"insecure-registries": [
+	  "reg.orienteer.ru:5000"
+	]
+  }
+  
