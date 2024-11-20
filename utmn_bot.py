@@ -56,7 +56,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if results:
         message = "\n\n".join(results)
     else:
-        message = "Не найдено постов с указанными маркерами."
+        message = "Не найдено постов с указанными маркерами. мяу 2"
     
     await update.message.reply_text(message)
 

@@ -10,7 +10,9 @@ brew install uv
 uv init
 uv venv --seed
 uv add requests python-telegram-bot
-uv run telegram_bot.py
+uv run utmn_bot.py
+
+uv sync --frozen
 ```
 
 ## docker
@@ -33,6 +35,10 @@ cpc srv/daemon.json vpn:/etc/docker/daemon.json
 ssh reg.orienteer.ru systemctl restart docker
 
 ssh reg.orienteer.ru docker run -d --restart always --name bot reg.orienteer.ru:5000/utmn_bot:0.0.1
+ssh reg.orienteer.ru docker stop bot
+ssh reg.orienteer.ru docker start bot
+ssh reg.orienteer.ru docker ps -a
+
 ```
 
 ```json
