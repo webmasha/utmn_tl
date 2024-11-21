@@ -9,7 +9,7 @@ main: build deploy
 echo:
 	@echo VER=$(VER)
 build:
-	docker build --push -t $(image) .
+	docker build --push --tag $(image) .
 deploy:
 	$(ssh_docker) rm $(name) --force
 	$(ssh_docker) run -d --restart always --name $(name) $(image)
