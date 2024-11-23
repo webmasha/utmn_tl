@@ -2,6 +2,7 @@ import os
 import emoji
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler
+from modeus import Modeus
 
 UTMN_TL_TOKEN = os.environ["UTMN_TL_TOKEN"]
 UTMN_TL_BOT_NAME = os.environ["UTMN_TL_BOT_NAME"]
@@ -18,8 +19,8 @@ async def start(update: Update, context):
     # Создаем кнопки
     keyboard = [
         [
-            InlineKeyboardButton("Расписание на сегодня", callback_data='button1'),
-            InlineKeyboardButton("Расписание на неделю", callback_data='button2')
+            InlineKeyboardButton("Расписание на сегодня", callback_data='today'),
+            InlineKeyboardButton("Расписание на неделю", callback_data='week')
         ]
     ]
     # Создаем разметку для кнопок
@@ -31,12 +32,17 @@ async def start(update: Update, context):
 async def button_callback(update: Update, context):
     query = update.callback_query
     await query.answer()
-    
+
+    modeus = Modeus()    
     # Определяем, какая кнопка была нажата
-    if query.data == 'button1':
-        await query.edit_message_text(text=emoji.emojize("""Вы нажали кнопку "Расписание на сегодня" :thumbs_up:""", language="alias"))
-    elif query.data == 'button2':
-        await query.edit_message_text(text=emoji.emojize("""Вы нажали кнопку "Расписание на неделю" :thumbs_up:""", language="alias"))
+    if query.data == 'week':
+        modeus.search()
+        events = modeus.get_events()
+        text = "\n".join(events) + emoji.emojize("\n :thumbs_up:", language="alias")
+        await query.edit_message_text(text)
+    elif query.data == 'today':
+        text = emoji.emojize("""Вы нажали кнопку "Расписание на сегодня" :thumbs_up:""", language="alias")
+        await query.edit_message_text(text)
 
 # Основной код для запуска бота
 def main():

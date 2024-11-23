@@ -10,7 +10,7 @@ brew install uv
 uv init
 uv venv --seed
 uv add requests python-telegram-bot
-uv run utmn_bot.py
+uv run bot.py
 
 uv sync --frozen
 ```

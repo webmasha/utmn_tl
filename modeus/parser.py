@@ -8,22 +8,26 @@ MODEUS_PASSWORD = os.environ["MODEUS_PASSWORD"]
 MODEUS_REMOTE = os.environ.get("MODEUS_REMOTE", "localhost")
 
 class Parser():
+    url = "https://utmn.modeus.org"
 
     def __init__(self, local, debug = True):
         self.debug = debug
-        if debug:
-            print(f"parsing start ... local is {bool(local)}")
+        self.local = local
+
+    def start(self):
+        if self.debug:
+            print(f"parsing start ... local is {bool(self.local)}")
         options = webdriver.ChromeOptions()
         options.add_argument("--avoid-stats") 
         # options.add_argument("--disable-blink-features=AutomationControlled") # Чтобы браузер был менее заметным
-        if local:
+        if self.local:
             self.driver = webdriver.Chrome(options=options)
         else:
             options.add_argument("--headless=new")
             self.driver = webdriver.Remote(options=options, command_executor=f"http://{MODEUS_REMOTE}:4444")
 
     def login(self):
-        self.driver.get("https://utmn.modeus.org")
+        self.driver.get(Parser.url)
         if self.debug:
             print('login:', self.driver.title)
         self.sleep(1)
@@ -51,6 +55,7 @@ class Parser():
 
 if __name__ == '__main__':
     p = Parser(1)
+    p.start()
     p.login()
     p.sleep(1)
     print(f"jwt: {p.get_jwt()}")
