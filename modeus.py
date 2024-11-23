@@ -4,9 +4,13 @@ import json
 class Modeus:
   url = "https://utmn.modeus.org"
 
-  def __init__(self):
-    with open('modeus/tmp/jwt.txt') as f:
-      self.jwt = f.read()
+  def __init__(self, jwt = None, debug = False):
+    self.debug = debug
+    if jwt:
+      self.jwt = jwt
+    else:
+      with open('modeus/tmp/jwt.txt') as f:
+        self.jwt = f.read()
 
   def search(self):
     url_search = Modeus.url + "/schedule-calendar-v2/api/calendar/events/search?tz=Asia/Tyumen"
@@ -15,8 +19,9 @@ class Modeus:
     j = requests.post(url_search, json=query, headers={'authorization': f"Bearer {self.jwt}", 'content-type': 'application/json'})
     if j.status_code == 200:
       d = j.json()
-      with open('tmp/search.json', 'w', encoding='utf8') as f:
-        json.dump(d, f, indent=4, ensure_ascii=False)
+      if self.debug:
+        with open('tmp/search.json', 'w', encoding='utf8') as f:
+          json.dump(d, f, indent=4, ensure_ascii=False)
       self.data = d["_embedded"]
       return True
 
@@ -25,7 +30,7 @@ class Modeus:
 
 
 if __name__ == '__main__':
-    m = Modeus()
+    m = Modeus(debug = True)
     m.search()
     e = m.get_events()
     print(f"Получено событий: {len(e)}")

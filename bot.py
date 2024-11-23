@@ -6,6 +6,7 @@ from modeus import Modeus
 
 UTMN_TL_TOKEN = os.environ["UTMN_TL_TOKEN"]
 UTMN_TL_BOT_NAME = os.environ["UTMN_TL_BOT_NAME"]
+UTMN_TL_JWT = os.environ["UTMN_TL_JWT"]
 
 # Обработчик команды /start
 async def start(update: Update, context):
@@ -27,20 +28,24 @@ async def start(update: Update, context):
     reply_markup = InlineKeyboardMarkup(keyboard)
     # Отправляем сообщение с кнопками
     await update.message.reply_text(emoji.emojize("Выберите кнопку :blush:", language="alias"), reply_markup=reply_markup)
+    print("/start")
 
 # Обработчик нажатий на кнопки
 async def button_callback(update: Update, context):
     query = update.callback_query
     await query.answer()
 
-    modeus = Modeus()    
+    modeus = Modeus(UTMN_TL_JWT)
     # Определяем, какая кнопка была нажата
     if query.data == 'week':
+        print("callback: week")
         modeus.search()
         events = modeus.get_events()
+        print(f"search events: {len(events)}")
         text = "\n".join(events) + emoji.emojize("\n :thumbs_up:", language="alias")
         await query.edit_message_text(text)
     elif query.data == 'today':
+        print("callback: today")
         text = emoji.emojize("""Вы нажали кнопку "Расписание на сегодня" :thumbs_up:""", language="alias")
         await query.edit_message_text(text)
 
