@@ -5,7 +5,7 @@ image = $(server):5000/$(SRV):$(VER)
 ssh_docker = ssh $(server) docker
 name = bot
 args_run = -e MODEUS_LOGIN=$$MODEUS_LOGIN -e MODEUS_PASSWORD=$$MODEUS_PASSWORD -e MODEUS_REMOTE=192.168.0.9
-# args_build = --push
+args_build = --push
 
 main: build run
 # main: build deploy
