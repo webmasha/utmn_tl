@@ -79,7 +79,6 @@ name = "modeus"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "pip" },
     { name = "requests" },
     { name = "selenium" },
 ]
@@ -91,7 +90,6 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "pip", specifier = ">=24.3.1" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "selenium", specifier = ">=4.26.1" },
 ]

@@ -18,8 +18,3 @@ ssh-down:
 	$(ssh_docker) rm $(SRV) --force
 run:
 	docker run $(args_run) -v $$PWD/utmn_tl.py:/app/utmn_tl.py --rm -it --name $(SRV) $(image)
-
-selenium_up:
-	docker run -d -p 4444:4444 -p 7900:7900 --shm-size="2g" --name selenium selenium/standalone-chrome:latest
-selenium_down:
-	docker rm selenium --force
