@@ -17,9 +17,9 @@ deploy:
 	$(ssh_docker) rm $(name) --force
 	$(ssh_docker) run -d --restart always --name $(name) $(image)
 run:
-	docker run $(args_run) --rm -it --name $(SRV) $(image)
+	docker run $(args_run) -v $(PWD)/tmp:/app/tmp --rm -it --name $(SRV) $(image)
 
 selenium_up:
-	docker run -d -p 4444:4444 -p 7900:7900 --shm-size="2g" --name selenium selenium/standalone-chrome:latest
+	docker run -d -p 4444:4444 -p 7900:7900 --shm-size="2g" --name selenium selenium/standalone-chromium:latest
 selenium_down:
 	docker rm selenium --force
