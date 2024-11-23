@@ -1,0 +1,240 @@
+{
+    "_embedded": {
+        "buildings": [
+            {
+                "name": "УЛК-01",
+                "nameShort": "УЛК-01",
+                "address": "ул. Республики, 9",
+                "searchableAddress": "Россия, г. Тюмень, ул. Республики, 9",
+                "displayOrder": 1,
+                "_links": {
+                    "self": {
+                        "href": "/041ee9f3-0c5e-4f0c-93bc-7e01a46a19f9"
+                    }
+                },
+                "id": "041ee9f3-0c5e-4f0c-93bc-7e01a46a19f9"
+            },
+            {
+                "name": "УЛК-03",
+                "nameShort": "УЛК-03",
+                "address": "ул. Осипенко, 2",
+                "searchableAddress": "Россия, г. Тюмень, ул. Осипенко, 2",
+                "displayOrder": 2,
+                "_links": {
+                    "self": {
+                        "href": "/25c9a9fe-e603-4036-8514-c63fde6bbad8"
+                    }
+                },
+                "id": "25c9a9fe-e603-4036-8514-c63fde6bbad8"
+            },
+            {
+                "name": "УЛК-04",
+                "nameShort": "УЛК-04",
+                "address": "ул. Ленина, 16",
+                "searchableAddress": "Россия, г. Тюмень, ул. Ленина, 16",
+                "displayOrder": 3,
+                "_links": {
+                    "self": {
+                        "href": "/6b16a257-35a1-41f0-8632-bf4dc355fdf5"
+                    }
+                },
+                "id": "6b16a257-35a1-41f0-8632-bf4dc355fdf5"
+            },
+            {
+                "name": "УЛК-05",
+                "nameShort": "УЛК-05",
+                "address": "ул. Перекопская, 15а",
+                "searchableAddress": "Россия, г. Тюмень, ул. Перекопская, 15а",
+                "displayOrder": 4,
+                "_links": {
+                    "self": {
+                        "href": "/67548cd6-b68b-4500-b079-c78e49567b10"
+                    }
+                },
+                "id": "67548cd6-b68b-4500-b079-c78e49567b10"
+            },
+            {
+                "name": "УЛК-09",
+                "nameShort": "УЛК-09",
+                "address": "ул. Ленина, 6",
+                "searchableAddress": "Россия, г. Тюмень, ул. Ленина, 6",
+                "displayOrder": 7,
+                "_links": {
+                    "self": {
+                        "href": "/f489e393-2291-4b82-bf03-e2600dab2778"
+                    }
+                },
+                "id": "f489e393-2291-4b82-bf03-e2600dab2778"
+            },
+            {
+                "name": "УЛК-10",
+                "nameShort": "УЛК-10",
+                "address": "ул. Ленина, 38",
+                "searchableAddress": "Россия, г. Тюмень, ул. Ленина, 38",
+                "displayOrder": 8,
+                "_links": {
+                    "self": {
+                        "href": "/16f8b5a1-2dc9-4a41-a8ec-d0b02714a19f"
+                    }
+                },
+                "id": "16f8b5a1-2dc9-4a41-a8ec-d0b02714a19f"
+            },
+            {
+                "name": "УЛК-11",
+                "nameShort": "УЛК-11",
+                "address": "ул. Ленина, 23",
+                "searchableAddress": "Россия, г. Тюмень, ул. Ленина, 23",
+                "displayOrder": 9,
+                "_links": {
+                    "self": {
+                        "href": "/247ae429-1071-403b-9993-c5764bc93496"
+                    }
+                },
+                "id": "247ae429-1071-403b-9993-c5764bc93496"
+            },
+            {
+                "name": "УЛК-12",
+                "nameShort": "УЛК-12",
+                "address": "ул. Семакова, 18",
+                "searchableAddress": "Россия, г. Тюмень, ул. Семакова, 18",
+                "displayOrder": 10,
+                "_links": {
+                    "self": {
+                        "href": "/83829a05-807c-482e-a33d-83a37d967760"
+                    }
+                },
+                "id": "83829a05-807c-482e-a33d-83a37d967760"
+            },
+            {
+                "name": "УЛК-13",
+                "nameShort": "УЛК-13",
+                "address": "ул. Барнаульская, 41",
+                "searchableAddress": "Россия, г. Тюмень, ул. Барнаульская, 41",
+                "displayOrder": 11,
+                "_links": {
+                    "self": {
+                        "href": "/a3b29fae-e2ea-4167-b6de-1fc72bf083cc"
+                    }
+                },
+                "id": "a3b29fae-e2ea-4167-b6de-1fc72bf083cc"
+            },
+            {
+                "name": "УЛК-16",
+                "nameShort": "УЛК-16",
+                "address": "ул. Проезд 9 Мая, 5",
+                "searchableAddress": "Россия, г. Тюмень, ул. Проезд 9 Мая, 5",
+                "displayOrder": 12,
+                "_links": {
+                    "self": {
+                        "href": "/bc3d1227-f7b7-43bd-be5c-36e0694fca75"
+                    }
+                },
+                "id": "bc3d1227-f7b7-43bd-be5c-36e0694fca75"
+            },
+            {
+                "name": "УЛК-17",
+                "nameShort": "УЛК-17",
+                "address": "ул. Ленина, 25",
+                "searchableAddress": "Россия, г. Тюмень, ул. Ленина, 25",
+                "displayOrder": 13,
+                "_links": {
+                    "self": {
+                        "href": "/6767b27f-ed3a-4fcf-97db-084f3149a9c1"
+                    }
+                },
+                "id": "6767b27f-ed3a-4fcf-97db-084f3149a9c1"
+            },
+            {
+                "name": "УЛК-10/Т9",
+                "nameShort": "УЛК-10/Т9",
+                "address": "ул. Тургенева,9",
+                "searchableAddress": "Россия, г. Тюмень, ул. Тургенева,9",
+                "displayOrder": 15,
+                "_links": {
+                    "self": {
+                        "href": "/b6d359e4-c3f1-11e9-aa8c-2a2ae2dbcce4"
+                    }
+                },
+                "id": "b6d359e4-c3f1-11e9-aa8c-2a2ae2dbcce4"
+            },
+            {
+                "name": "УЛК-10/Р18",
+                "nameShort": "УЛК-10/Р18",
+                "address": "ул. Республики,18",
+                "searchableAddress": "Россия, г. Тюмень, ул. Республики, 18",
+                "displayOrder": 16,
+                "_links": {
+                    "self": {
+                        "href": "/r6d35e08-c3f1-11e9-aa8c-2a2ae2dbcce4"
+                    }
+                },
+                "id": "r6d35e08-c3f1-11e9-aa8c-2a2ae2dbcce4"
+            },
+            {
+                "name": "ЦЗВС",
+                "nameShort": "ЦЗВС",
+                "address": "ул. Барнаульская,41",
+                "searchableAddress": "Россия, г. Тюмень, ул. Барнаульская,41",
+                "displayOrder": 17,
+                "_links": {
+                    "self": {
+                        "href": "/ara360ba-c3f1-11e9-aa8c-2a2ae2dbcce4"
+                    }
+                },
+                "id": "ara360ba-c3f1-11e9-aa8c-2a2ae2dbcce4"
+            },
+            {
+                "name": "УЛК-06",
+                "nameShort": "УЛК-06",
+                "address": "ул. Пирогова, 3",
+                "searchableAddress": "Россия, г. Тюмень, ул. Пирогова, 3",
+                "displayOrder": 5,
+                "_links": {
+                    "self": {
+                        "href": "/782189ad-3de6-4e1b-9f15-b6632fdb6143"
+                    }
+                },
+                "id": "782189ad-3de6-4e1b-9f15-b6632fdb6143"
+            },
+            {
+                "name": "УЛК-07",
+                "nameShort": "УЛК-07",
+                "address": "ул. Пржевальского, 37",
+                "searchableAddress": "Россия, г. Тюмень, ул. Пржевальского, 37 (корпус-1)",
+                "displayOrder": 6,
+                "_links": {
+                    "self": {
+                        "href": "/55add2dc-b2ab-467e-bed9-73618dc1c225"
+                    }
+                },
+                "id": "55add2dc-b2ab-467e-bed9-73618dc1c225"
+            },
+            {
+                "name": "УЛК-07 СК",
+                "nameShort": "УЛК-07 СК",
+                "address": "ул. Пржевальского, 37",
+                "searchableAddress": "Россия, г. Тюмень, ул. Прежевальского, 37",
+                "displayOrder": 18,
+                "_links": {
+                    "self": {
+                        "href": "/b254d25d-51e9-4de9-ab30-9e22fba8c1bf"
+                    }
+                },
+                "id": "b254d25d-51e9-4de9-ab30-9e22fba8c1bf"
+            },
+            {
+                "name": "УЛК-19",
+                "nameShort": "УЛК-19",
+                "address": "ул. 8 марта 2/1",
+                "searchableAddress": "Россия, г. Тюмень, ул. 8 марта 2/1",
+                "displayOrder": 14,
+                "_links": {
+                    "self": {
+                        "href": "/d0e66790-421b-41b0-897c-c773f11f45a5"
+                    }
+                },
+                "id": "d0e66790-421b-41b0-897c-c773f11f45a5"
+            }
+        ]
+    }
+}
