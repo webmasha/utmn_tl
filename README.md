@@ -1,4 +1,4 @@
-# UTMN bot
+# UTMN bot 
 
 ## uv
 
@@ -39,6 +39,7 @@ ssh reg.orienteer.ru docker stop bot
 ssh reg.orienteer.ru docker start bot
 ssh reg.orienteer.ru docker ps -a
 
+set -Ux UTMN_TL_TOKEN 78..:..
 ```
 
 ```json

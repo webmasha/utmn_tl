@@ -1,7 +1,11 @@
 import re
+import os
 import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+
+UTMN_TL_TOKEN = os.environ["UTMN_TL_TOKEN"]
+UTMN_TL_BOT_NAME = os.environ["UTMN_TL_BOT_NAME"]
 
 # Функция для получения последних 20 постов из сообщества
 def get_vk_posts(group_id, access_token):
@@ -63,7 +67,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 # Основной код для запуска бота
 def main():
     # Создаем приложение с вашим токеном
-    application = ApplicationBuilder().token("7822316799:AAHkrOT1ma0fA8wNnUf0Jo1DVsL3TiVtBEE").build()
+    application = ApplicationBuilder().token(UTMN_TL_TOKEN).build()
 
     # Добавляем обработчик команды /start
     application.add_handler(CommandHandler("start", start))
@@ -72,5 +76,5 @@ def main():
     application.run_polling()
 
 if __name__ == '__main__':
-    print("start on https://t.me/tgbotutmn_bot")
+    print(f"start on https://t.me/{UTMN_TL_BOT_NAME}")
     main()
