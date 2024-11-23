@@ -1,4 +1,5 @@
 import os
+import emoji
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler
 
@@ -17,14 +18,14 @@ async def start(update: Update, context):
     # Создаем кнопки
     keyboard = [
         [
-            InlineKeyboardButton("Кнопка 1", callback_data='button1'),
-            InlineKeyboardButton("Кнопка 2", callback_data='button2')
+            InlineKeyboardButton("Расписание на сегодня", callback_data='button1'),
+            InlineKeyboardButton("Расписание на неделю", callback_data='button2')
         ]
     ]
     # Создаем разметку для кнопок
     reply_markup = InlineKeyboardMarkup(keyboard)
     # Отправляем сообщение с кнопками
-    await update.message.reply_text("Выберите кнопку:", reply_markup=reply_markup)
+    await update.message.reply_text(emoji.emojize("Выберите кнопку :blush:", language="alias"), reply_markup=reply_markup)
 
 # Обработчик нажатий на кнопки
 async def button_callback(update: Update, context):
@@ -33,9 +34,9 @@ async def button_callback(update: Update, context):
     
     # Определяем, какая кнопка была нажата
     if query.data == 'button1':
-        await query.edit_message_text(text="Вы нажали кнопку 1!")
+        await query.edit_message_text(text=emoji.emojize("""Вы нажали кнопку "Расписание на сегодня" :thumbs_up:""", language="alias"))
     elif query.data == 'button2':
-        await query.edit_message_text(text="Вы нажали кнопку 2!")
+        await query.edit_message_text(text=emoji.emojize("""Вы нажали кнопку "Расписание на неделю" :thumbs_up:""", language="alias"))
 
 # Основной код для запуска бота
 def main():
